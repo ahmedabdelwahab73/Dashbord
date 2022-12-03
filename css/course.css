@@ -1,0 +1,394 @@
+/* start global ruls */
+:root{
+    --main-head-color:rgb(0, 0, 0);
+    --body-background-color: rgb(241,245,249);
+    --box-background-color: rgb(255,255,255);
+    --link-background-color: rgb(0,117,255);
+    --text-body-color: rgb(136,136,151);
+    --gren-color: rgb(238,238,238);
+    --money-background-color: rgb(204,227,255);
+    --project-background-color: rgb(253,236,206);
+    --team-background-color: rgb(211,243,223);
+    --active-background-color: rgb(246,246,246);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+/* end global ruls */
+/* start responsive */
+/* .container{
+    width: 97.5%;
+    margin-left: auto;
+    margin-right: auto;
+} */
+/* end responsive */
+/* start main */
+.page{
+    min-height: 100vh;
+    display: flex;
+    background-color: aqua;
+    background-color: var(--body-background-color);
+}
+
+nav{
+    width: 12%;
+    box-shadow: 0px 0px 20px 2px rgb(199 202 204);
+    background-color: var(--box-background-color);
+    position: relative;
+    /* padding: 0px 20px; */
+}
+nav h2{
+    margin: 40px auto;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    position: relative;
+}
+nav h2::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    left: 24%;
+    bottom: -16px;
+    background-color: var(--main-head-color);
+}
+nav h2::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 42%;
+    bottom: -26px;
+    background-color: var(--main-head-color);
+    border-radius: 50%;
+    border: 5px solid white;
+}
+nav > ul {
+    margin: 0% 6%;
+}
+nav > ul li {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+nav > ul li:hover{
+    background-color: var(--active-background-color);
+}
+nav > ul > li a{
+    display: inline-block;
+    margin-left: 5px;
+    padding: 10px 0px;
+    color: var(--main-head-color);
+}
+nav > ul > li i{
+    font-size: 14px;
+    padding: 0;
+}
+nav > ul li span{
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-left: 5px;
+}
+nav .active{
+    background-color: var(--active-background-color);
+}
+@media (max-width: 952px) {
+    nav{
+        width: 12%;
+    }
+    nav > ul {
+        margin: 0% 0%;
+    }
+    nav h2::before{
+        width: 70%;
+        height: 2px;
+        left: 15%;
+    }
+    nav h2::after{
+        left: 38%;
+    }
+    nav > ul li span{
+        display: inline-block;
+        text-transform: capitalize;
+        font-size: 13px;
+        margin-left: 0px;
+    }
+}
+@media (max-width: 767px) {
+    nav{
+        width: 11%;
+    }
+    nav h2{
+        font-size: 16px;
+        text-align: center;
+    }
+    nav > ul > li a{
+        text-align: center;
+    }
+    nav > ul li span{
+        display: none;
+    }
+    nav > ul > li i{
+        font-size: 20px;
+    }
+    nav h2::before,
+    nav h2::after{
+    display: none;
+    }
+    nav > ul li {
+        text-align: center;
+    }
+}
+@media (max-width: 460px) {
+    /* nav{
+        width: 12%;
+        padding: 0px;
+    } */
+    nav h2{
+        font-size: 12px;
+    }
+}
+/* end main */
+/********************************************************/
+/********************************************************/
+/* start header */
+/* .ahmed{
+    min-
+} */
+
+/* @media (max-width: 767px) {
+    section{
+        width: 89%;
+    }
+}  */
+section{
+    width: 88%;
+}
+/* @media (max-width: 460px) {
+    section{
+        width: 300%;
+    }
+} */
+header{
+    height: 70px;
+    background-color: var(--box-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+/* start form */
+header .form{
+    position: relative;
+    margin-left: 1.5%;
+    min-width: 22%;
+}
+header .form i{
+    font-size: 15px;
+}
+.fa-magnifying-glass:before, .fa-search:before {
+    content: "\f002";
+    position: absolute;
+    transform: translate(94%, -76%);
+}
+header .form input{
+    border: 1px solid var(--text-body-color);
+    padding: 8px 19px 8px 30px;
+    border-radius: 10px;
+    width: 45%;
+    transition: width 0.3s ease;
+}
+header .form input:hover{
+    width: 55%;
+}
+header .form input::placeholder{
+    text-transform: capitalize;
+    font-size: 14px;
+}
+/* end form */
+header .ri-header{
+    margin-right: 1.5%;
+}
+header .ri-header i{
+    font-size: 18px;
+    position: relative;
+}
+header .fa-bell:before {
+    content: "\f0f3";
+    position: absolute;
+    transform: translate(-176%, -80%);
+}
+header .fa-bell::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(244,67,54);
+    transform: translate(-155%, -182%);
+}
+header .ri-header img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+@media (max-width: 425px) {
+    header .form{
+        width: 70%;
+    }
+    header .form i{
+        font-size: 12px;
+    }
+    header .form input{
+        width: 55%;
+    }
+    header .form input::placeholder{
+        font-size: 12px;
+    }
+}
+/* end header */
+/********************************************************/
+/********************************************************/
+/* start section */
+.section{
+    width: 97.5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+section .main-title{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    /* margin: 30px 0px; */
+    border-bottom: 3px solid white;
+    height: 45px;
+    position: relative;
+    cursor: pointer;
+}
+section .main-title::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 28%;
+    bottom: -3px;
+    background-color: var(--main-head-color);
+    transition: width 0.5s ease;
+}
+section .main-title:hover::before{
+    width: 100%;
+}
+@media (max-width: 955px) {
+    .section{
+        width: 90%;
+    }
+}
+/* end section */
+/***************************************************************/
+/***************************************************************/
+/* start data  */
+.data{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px 0px;
+}
+@media (max-width: 584px) {
+    .data{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 10px;
+        padding: 30px 0px;
+    }
+}
+/* end data  */
+/***************************************************************/
+/***************************************************************/
+/* strat box */
+.data .box{
+    width: 100%;
+    background-color: var(--box-background-color);
+    border-radius: 10px;
+    margin-bottom: 1%;
+    overflow: hidden;
+    position: relative;
+}
+.box .contant{
+    position: relative;
+}
+.box .image {
+    position: relative;
+}
+.box .image img{
+    width: 100%;
+}
+.box .image .small-image{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    top: 20px;
+    left: 20px;
+}
+.box .text{
+    padding: 15px;
+}
+.box .text h2{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.box .text span{
+    display: block;
+    color: rgb(136, 136, 136);
+    font-size: 14px;
+    line-height: 22px;
+    margin: 10px 0px;
+}
+.box .link{
+    position: relative;
+}
+.box .link a{
+    position: absolute;
+    top: -11.47px;
+    transform: translatex(-50%);
+    left: 50%;
+    background-color: var(--link-background-color);
+    color: var(--box-background-color);
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+.border-to-1{
+    border-top: 1px solid #eee;
+}
+.box .icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: rgb(136, 136, 136);
+}
+.box .icon .number i{
+    font-size: 13px;
+}
+.box .icon .number span{
+    font-size: 13px;
+}
+/* end box */

@@ -1,0 +1,606 @@
+/* start global ruls */
+:root{
+    --main-head-color:rgb(0, 0, 0);
+    --body-background-color: rgb(241,245,249);
+    --box-background-color: rgb(255,255,255);
+    --link-background-color: rgb(0,117,255);
+    --text-body-color: rgb(136,136,151);
+    --gren-color: rgb(238,238,238);
+    --money-background-color: rgb(204,227,255);
+    --project-background-color: rgb(253,236,206);
+    --team-background-color: rgb(211,243,223);
+    --active-background-color: rgb(246,246,246);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+/* end global ruls */
+/* start responsive */
+/* .container{
+    width: 97.5%;
+    margin-left: auto;
+    margin-right: auto;
+} */
+/* end responsive */
+/* start main */
+.page{
+    min-height: 100vh;
+    display: flex;
+    background-color: aqua;
+    background-color: var(--body-background-color);
+}
+
+nav{
+    width: 12%;
+    box-shadow: 0px 0px 20px 2px rgb(199 202 204);
+    background-color: var(--box-background-color);
+    position: relative;
+    /* padding: 0px 20px; */
+}
+nav h2{
+    margin: 40px auto;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    position: relative;
+}
+nav h2::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    left: 24%;
+    bottom: -16px;
+    background-color: var(--main-head-color);
+}
+nav h2::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 42%;
+    bottom: -26px;
+    background-color: var(--main-head-color);
+    border-radius: 50%;
+    border: 5px solid white;
+}
+nav > ul {
+    margin: 0% 6%;
+}
+nav > ul li {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+nav > ul li:hover{
+    background-color: var(--active-background-color);
+}
+nav > ul > li a{
+    display: inline-block;
+    margin-left: 5px;
+    padding: 10px 0px;
+    color: var(--main-head-color);
+}
+nav > ul > li i{
+    font-size: 14px;
+    padding: 0;
+}
+nav > ul li span{
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-left: 5px;
+}
+nav .active{
+    background-color: var(--active-background-color);
+}
+@media (max-width: 952px) {
+    nav{
+        width: 12%;
+    }
+    nav > ul {
+        margin: 0% 0%;
+    }
+    nav h2::before{
+        width: 70%;
+        height: 2px;
+        left: 15%;
+    }
+    nav h2::after{
+        left: 38%;
+    }
+    nav > ul li span{
+        display: inline-block;
+        text-transform: capitalize;
+        font-size: 13px;
+        margin-left: 0px;
+    }
+}
+@media (max-width: 767px) {
+    nav{
+        width: 11%;
+    }
+    nav h2{
+        font-size: 16px;
+        text-align: center;
+    }
+    nav > ul > li a{
+        text-align: center;
+    }
+    nav > ul li span{
+        display: none;
+    }
+    nav > ul > li i{
+        font-size: 20px;
+    }
+    nav h2::before,
+    nav h2::after{
+    display: none;
+    }
+    nav > ul li {
+        text-align: center;
+    }
+}
+@media (max-width: 460px) {
+    /* nav{
+        width: 12%;
+        padding: 0px;
+    } */
+    nav h2{
+        font-size: 12px;
+    }
+}
+/* end main */
+/********************************************************/
+/********************************************************/
+/* start header */
+/* .ahmed{
+    min-
+} */
+
+/* @media (max-width: 767px) {
+    section{
+        width: 89%;
+    }
+}  */
+section{
+    width: 88%;
+}
+/* @media (max-width: 460px) {
+    section{
+        width: 300%;
+    }
+} */
+header{
+    height: 70px;
+    background-color: var(--box-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+/* start form */
+header .form{
+    position: relative;
+    margin-left: 1.5%;
+    min-width: 22%;
+}
+header .form i{
+    font-size: 15px;
+}
+.fa-magnifying-glass:before, .fa-search:before {
+    content: "\f002";
+    position: absolute;
+    transform: translate(94%, -76%);
+}
+header .form input{
+    border: 1px solid var(--text-body-color);
+    padding: 8px 19px 8px 30px;
+    border-radius: 10px;
+    width: 45%;
+    transition: width 0.3s ease;
+}
+header .form input:hover{
+    width: 55%;
+}
+header .form input::placeholder{
+    text-transform: capitalize;
+    font-size: 14px;
+}
+/* end form */
+header .ri-header{
+    margin-right: 1.5%;
+}
+header .ri-header i{
+    font-size: 18px;
+    position: relative;
+}
+header .fa-bell:before {
+    content: "\f0f3";
+    position: absolute;
+    transform: translate(-176%, -80%);
+}
+header .fa-bell::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(244,67,54);
+    transform: translate(-155%, -182%);
+}
+header .ri-header img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+@media (max-width: 425px) {
+    header .form{
+        width: 70%;
+    }
+    header .form i{
+        font-size: 12px;
+    }
+    header .form input{
+        width: 55%;
+    }
+    header .form input::placeholder{
+        font-size: 12px;
+    }
+}
+/* end header */
+/********************************************************/
+/********************************************************/
+/* start section */
+.section{
+    width: 97.5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+section .main-title{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    /* margin: 30px 0px; */
+    border-bottom: 3px solid white;
+    height: 45px;
+    position: relative;
+    cursor: pointer;
+}
+section .main-title::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 28%;
+    bottom: -3px;
+    background-color: var(--main-head-color);
+    transition: width 0.5s ease;
+}
+section .main-title:hover::before{
+    width: 100%;
+}
+/* end section */
+/* start data  */
+.data{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    padding: 30px 0px;
+}
+.data .box{
+    background-color: var(--box-background-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+/* start box one */
+.one{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.one .head{
+    margin: 0px auto;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 39vh;
+}
+.one .head .image{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+.one .head .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.one .head .pragh{
+    text-align: center;
+}
+.one .head .pragh h2{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.one .head .pragh span{
+    display: inline-block;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--text-body-color);
+    margin: 15px 0px;
+}
+.one .head .timeline{
+    width: 50%;
+    height: 5px;
+    background-color: var(--text-body-color);
+    border-radius: 5px;
+    position: relative;
+}
+.one .head .timeline::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 5px;
+    background-color: var(--link-background-color);
+}
+.one .head .icon i{
+    color: rgb(245, 158, 11);
+    margin: 15px 0px;
+    font-size: 14px;
+}
+.one .head .text span{
+    color: var(--text-body-color);
+    font-size: 13px;
+}
+/* start timeline >>> box-one */
+.one > .timeline{
+    width: 1px;
+    height: 100%;
+    padding: 80px 0px;
+}
+.one .timeline > div{
+background-color: #eee;
+width: 1px;
+height: 100%;
+}
+/* end timeline> >> box-one */
+.one .contant{
+    width: 84%;
+}
+.one .contant .line-hover{
+    transition: background-color 0.3s ease;
+}
+.one .contant .line-hover:hover {
+    background-color: #f9f9f9;
+}
+.one .contant .line{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 65%;
+    padding: 20px;
+    row-gap: 10px;
+}
+.border-to-1{
+    border-top: 1px solid #eee;
+}
+
+.one .contant .line .title{
+    width: 100%;
+    /* margin-bottom: 10px; */
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-body-color);
+}
+.one .contant .line .question {
+    width: 210px;
+}
+.one .contant .line .question h5{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--text-body-color);
+}
+.one .contant .line .question span{
+    font-size: 14px;
+}
+.one .contant .line .icon{
+    width: 150px;
+}
+@media (max-width: 767px) {
+    .one{
+        flex-direction: column;
+    }
+    .one .contant {
+        width: 100%;
+    }
+    .one .head {
+        width: 100%;
+    }
+    .one > .timeline{
+        display: none;
+    }
+    .one .contant .line {
+        width: 100%;
+        justify-content: center;
+    }
+    .one .contant .line .title {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+    }
+    .one .contant .line .question {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+/* end box one */
+/****************************************/
+/****************************************/
+/* start box two */
+.two{
+    padding: 20px;
+    width: 34.25%;
+}
+.head h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.head span{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: var(--text-body-color);
+}
+.two .contant{
+    padding: 20px 0px;
+}
+.two .contant span{
+    font-size: 14px;
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+.two .contant span:not(:last-child){
+    margin-right: 5px;
+}
+@media (max-width: 767px) {
+    .two{
+        width: 100%;
+    }
+    .head span {
+        margin-bottom: 10px;
+    }
+    .two .contant{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 425px) {
+    .head {
+        text-align: center;
+    }
+    .head h2{
+        font-size: 20px;
+    }
+    .head span {
+        font-size: 13px;
+    }
+    .two .contant {
+        padding: 10px 0px;
+    }
+}
+/* end box two */
+/****************************************/
+/****************************************/
+/* start box three */
+.three{
+    padding: 20px;
+    width: 64.25%;
+}
+.three .contant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.three .le-contant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 87%;
+    gap: 5px;
+    padding: 15px 0px;
+}
+.three .le-contant img{
+    width: 70px;
+    height: 70px;
+}
+.three .le-contant .text {
+    width: 88%;
+}
+.three .le-contant .text h2{
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.three .le-contant .pragh span{
+    display: inline-block;
+    font-size: 16px;
+    color: var(--text-body-color);
+}
+.three .ri-contant{
+    width: 13%;
+    text-align: end;
+}
+.three .ri-contant .time{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.three .ri-contant .day{
+    font-size: 16px;
+    color: var(--text-body-color);
+}
+@media (max-width: 767px) {
+    .three{
+        width: 100%;
+    }
+    .three .contant {
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+    .three .le-contant {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .three .le-contant img {
+        margin-bottom: 15px;
+    }
+    .three .le-contant .text {
+        width: 100%;
+        text-align: center;
+    }
+    .three .ri-contant {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 425px) {
+    .three .contant {
+        padding: 10px 0px;
+    }
+    .three .le-contant {
+        padding-top: 0px;
+    }
+    .three .le-contant .pragh span {
+        font-size: 13px;
+    }
+}
+/* end box three */
+/* end data  */
